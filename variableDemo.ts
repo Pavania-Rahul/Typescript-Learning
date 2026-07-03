@@ -1,12 +1,11 @@
 // Defined Diffrent Types of Varibale 
  
 //string type--->>>
-
 var userName:string = "Test";
 console.log(userName);
 
-//number type it is accepted decimal and int number value-->>
 
+//number type it is accepted decimal and int number value-->>
 var numberValue:number= 12;
 console.log(numberValue);
 
@@ -17,6 +16,5 @@ console.log(isTrue);
 
 
 //undefined type--->>
-
 var userData:undefined;
 console.log(userData);
