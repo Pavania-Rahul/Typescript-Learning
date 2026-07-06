@@ -35,4 +35,4 @@ console.log(value.toUpperCase()); //output will be -->> WELCOME
 //trim()
 
 var spaceRemove:string = " Welcome   ";
-console.log(spaceRemove.trim());
+console.log(spaceRemove.trim());  //output will be --->>Welcome
