@@ -45,3 +45,12 @@ age(2);
 var firstDeclare:number = 10;
 var secondDeclare:number = 20;
 console.log(firstDeclare>secondDeclare?"first number is big":"second number is big");
+
+
+//Logical Operator
+var a:boolean = true;
+var b:boolean=false;
+console.log(a&&b);
+console.log(a||b);
+console.log(!a);
+console.log(!b);
