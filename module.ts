@@ -1,6 +1,6 @@
 var x:string ="Welcome";
 
-function myfunction():void{
+export function myfunction():void{
     console.log("Typescript writing");
 }
 

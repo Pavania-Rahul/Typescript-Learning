@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MyClass = void 0;
+exports.myfunction = myfunction;
 var x = "Welcome";
 function myfunction() {
     console.log("Typescript writing");
