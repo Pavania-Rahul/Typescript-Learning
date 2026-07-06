@@ -94,8 +94,9 @@ function greet(greeting:string, name:string):string{
  //Rest Parameter:-->> Rest Parameters allow a function to accept any number of arguments 
  // and store them as an array.
  function greet4(greetingMessage:String,...name:string[]):string{
-    console.log(name);
+    console.log(name);  //-->> [ 'How are you', 'Nice to meet you', 'You are good Guy' ]
     return greetingMessage+" "+name;
  }
 
  console.log(greet4("hello","How are you","Nice to meet you","You are good Guy"));
+ //-->> hello How are you,Nice to meet you,You are good Guy
