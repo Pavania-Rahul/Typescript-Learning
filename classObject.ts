@@ -1,4 +1,4 @@
-class Employee {
+class Employee1 {
 
       employeeID:number;
       emolyeeName:string;
@@ -20,5 +20,5 @@ display():void{
 
 }
 
-var emp = new Employee(100,"William",10);
-emp.display(); 
+var emp1 = new Employee1(100,"William",10);
+emp1.display(); 
