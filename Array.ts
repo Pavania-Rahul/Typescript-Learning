@@ -24,8 +24,6 @@ for(var i:number=0;i<fruits1.length;i++){
 for(var j in fruits1){
     console.log(fruits1[j]);   //---> apple mango banana
 }
-  
-
 
 //Multi Dimensional Array
 var myArray:number[][] = [[10,20],[30,40],[50,60]];
