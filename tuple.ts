@@ -4,7 +4,7 @@ console.log(employee); //-->> [ 101, 'John', 102 ]
 
 //accessing element
 console.log(employee[1]); //John
-console.log(employee[3]); // undefined
+// console.log(employee[3]); // undefined
 
 
 //Add element in to tuple ---->> push()
