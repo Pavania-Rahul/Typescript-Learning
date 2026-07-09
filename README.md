@@ -215,6 +215,216 @@ let city: string = 'Ahmedabad';
 console.log(name);
 console.log(city);
 
+What is a String?
+
+A string is a sequence of characters enclosed in:
+
+Double quotes " "
+Single quotes ' '
+Backticks ` ` (Template Literals)
+
+
+let name: string = "Rahul";
+let city: string = 'Ahmedabad';
+let message: string = `Welcome`;
+
+**1. length**
+Returns the number of characters in a string.
+
+let name = "Rahul";
+
+console.log(name.length);
+
+Output:
+5
+
+**2. charAt()**
+
+Returns the character at a specific index.
+
+let name = "Rahul";
+
+console.log(name.charAt(0));
+console.log(name.charAt(2));
+
+let name = "Rahul";
+
+console.log(name.charAt(0));
+console.log(name.charAt(2));
+
+Output:
+R
+h
+
+
+**3. Access Characters Using []**
+
+let name = "Rahul";
+
+console.log(name[0]);
+console.log(name[3]);
+
+Output:
+R
+u
+
+**4. toUpperCase()**
+
+Converts all letters to uppercase.
+
+let name = "Rahul";
+console.log(name.toUpperCase());
+
+Output:
+RAHUL
+
+**5. toLowerCase()**
+
+let name = "RAHUL";
+
+console.log(name.toLowerCase());
+
+Output:
+rahul
+
+**6. includes()**
+
+Checks whether a string contains another string.
+
+let language = "TypeScript";
+
+console.log(language.includes("Script"));
+console.log(language.includes("Java"));
+
+Output:
+true
+false
+
+**7. startsWith()**
+
+Checks if a string starts with a specific value.
+
+let language = "TypeScript";
+
+console.log(language.startsWith("Type"));
+console.log(language.startsWith("Java"));
+
+Output:
+true
+false
+
+**8. endsWith()**
+
+Checks if a string ends with a specific value.
+
+let language = "TypeScript";
+
+console.log(language.endsWith("Script"));
+console.log(language.endsWith("Type"));
+
+Output:
+
+true
+false
+
+
+**9. indexOf()**
+
+Returns the index of the first occurrence.
+let name = "Rahul";
+
+console.log(name.indexOf("h"));
+
+Output:
+2
+
+If not found:
+
+console.log(name.indexOf("x"));
+Output:
+
+-1
+
+**10. substring()**
+
+Extracts part of a string.
+
+let name = "Rahul";
+
+console.log(name.substring(1, 4));
+
+**Output:**
+ahu
+
+**11. slice()**
+
+Also extracts part of a string.
+
+let name = "Rahul";
+
+console.log(name.slice(1, 4));
+
+Output:
+ahu
+
+**12. replace()**
+
+Replaces the first matching substring.
+
+let sentence = "I like Java";
+
+console.log(sentence.replace("Java", "TypeScript"));
+
+Output:
+
+I like TypeScript
+
+**13. replaceAll()**
+
+Replaces all matching substrings.
+
+let text = "Java Java Java";
+
+console.log(text.replaceAll("Java", "TypeScript"));
+
+Output:
+TypeScript TypeScript TypeScript
+
+**14. trim()**
+
+Removes spaces from the beginning and end.
+
+let name = "   Rahul   ";
+
+console.log(name.trim());
+
+Output:
+Rahul
+
+
+**15. split()**
+Splits a string into an array.
+
+let fruits = "Apple,Mango,Banana";
+
+console.log(fruits.split(","));
+
+Output:
+["Apple", "Mango", "Banana"]
+
+**16. Template Literals**
+Use backticks (`) to embed variables.
+
+let name = "Rahul";
+let age = 25;
+
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+Output:
+
+My name is Rahul and I am 25 years old.
+
+
 -----------------------
 **3. boolean**
 
@@ -1248,6 +1458,9 @@ Output:
   name: "Rahul",
   age: 25
 }
+
+
+
 
 
 
