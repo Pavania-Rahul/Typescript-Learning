@@ -1459,6 +1459,86 @@ Output:
   age: 25
 }
 
+**Lession 11 Enums in TypeScript**
+
+**What is an Enum?**
+Interview Definition
+
+An enum (enumeration) is a special TypeScript feature that allows you to define a collection of named constant values.
+
+Syntax:
+
+enum Status {
+    Pending,
+    Approved,
+    Rejected
+}
+
+Explanation:
+
+enum → Keyword
+Status → Enum name
+Pending, Approved, Rejected → Enum members
+
+
+**Numeric Enum** (Default)
+
+enum Status {
+    Pending,
+    Approved,
+    Rejected
+}
+
+console.log(Status.Pending);
+console.log(Status.Approved);
+console.log(Status.Rejected);
+
+Output
+0
+1
+2
+
+By default, the first member starts at 0.
+
+Assigning Custom Values
+enum Status {
+    Pending = 10,
+    Approved,
+    Rejected
+}
+
+console.log(Status.Pending);
+console.log(Status.Approved);
+console.log(Status.Rejected);
+
+Output
+10
+11
+12
+
+**String Enum**
+Instead of numbers, you can assign strings.
+
+enum Browser {
+    Chrome = "chrome",
+    Firefox = "firefox",
+    Edge = "edge"
+}
+
+console.log(Browser.Chrome);
+
+Output
+chrome
+
+**Const Enum**
+A const enum is optimized during compilation.
+
+const enum Direction {
+    Up,
+    Down
+}
+
+let move = Direction.Up;
 
 
 
