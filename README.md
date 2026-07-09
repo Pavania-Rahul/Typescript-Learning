@@ -815,7 +815,7 @@ for (const city of cities) {
     console.log(city);
 }
 
-output:
+**output:**
 Ahmedabad
 Surat
 Rajkot
@@ -831,7 +831,7 @@ and values into a single variable.
 In TypeScript, an object can also have a defined type, 
 allowing the compiler to check that each property has the correct data type.
 
-Example:
+**Example:**
 
 let name = "Rahul";
 let age = 25;
@@ -902,7 +902,7 @@ console.log(employee.address.city);
 output:
 Ahmedabad
 
-Array of Objects
+**Array of Objects**
 
 const employees = [
     {
@@ -922,3 +922,328 @@ for (const employee of employees) {
 output:
 Rahul
 Amit
+
+
+**Deleting a Property**
+const employee = {
+    name: "Rahul",
+    age: 25
+};
+
+delete employee.age;
+
+console.log(employee);
+Output:
+
+{
+  name: "Rahul"
+}
+
+
+**Object with Arrays**
+
+const employee = {
+    name: "Rahul",
+    skills: ["Java", "TypeScript", "Playwright"]
+};
+
+console.log(employee.skills[0]);
+
+Output:
+Java
+
+**Object with Methods**
+
+Objects can also contain functions (called methods).
+
+const employee = {
+    name: "Rahul",
+
+    greet() {
+        console.log("Hello " + this.name);
+    }
+};
+
+employee.greet();
+
+Output:
+Hello Rahul
+
+
+**Loop Through an Object**
+
+const employee = {
+    name: "Rahul",
+    age: 25,
+    city: "Ahmedabad"
+};
+
+for (const key in employee) {
+    console.log(key, employee[key as keyof typeof employee]);
+}
+
+Output:
+name Rahul
+age 25
+city Ahmedabad
+
+**Object Destructuring**
+
+Destructuring is an ES6 (JavaScript) feature that TypeScript also supports.
+ It allows you to extract values from an object or array and store them in separate variables.
+ 
+ const employee = {
+    name: "Rahul",
+    age: 25,
+    company: "Google"
+};
+
+console.log(employee.name);
+console.log(employee.age);
+console.log(employee.company);
+
+write code in destructuring 
+
+const employee = {
+    name: "Rahul",
+    age: 25
+};
+
+const { name, age } = employee;
+
+console.log(name);
+console.log(age);
+
+
+**Module 10 (Part 2) – Object Methods**
+
+Object methods are built-in functions provided by JavaScript/TypeScript to work with objects.
+
+**1. Object.keys()**
+Definition
+
+Object.keys() returns an array containing all the property names (keys) of an object.
+
+Object.keys(objectName)
+
+const employee = {
+    name: "Rahul",
+    age: 25,
+    city: "Ahmedabad"
+};
+
+console.log(Object.keys(employee));
+Output:
+["name", "age", "city"]
+
+**2. Object.values()**
+Definition
+
+Returns an array containing all the values of an object.
+
+const employee = {
+    name: "Rahul",
+    age: 25,
+    city: "Ahmedabad"
+};
+
+console.log(Object.values(employee));
+
+["Rahul",25,"Ahmedabad"]
+
+
+**3. Object.entries()**
+Definition
+
+Returns both keys and values as an array of arrays.
+
+const employee = {
+    name: "Rahul",
+    age: 25
+};
+
+console.log(Object.entries(employee));
+
+[
+  ["name","Rahul"],
+  ["age",25]
+]
+
+**Loop using Object.entries()**
+
+const employee = {
+    name: "Rahul",
+    age: 25
+};
+
+for (const [key, value] of Object.entries(employee)) {
+    console.log(key, value);
+}
+
+Output:
+
+name Rahul
+age 25
+
+
+**4. Object.assign()**
+Definition
+
+Copies properties from one or more source objects into a target object.
+
+The syntax is:
+Object.assign(target, source1, source2, source3, ...)
+
+const person = {
+    name: "Rahul"
+};
+
+const address = {
+    city: "Ahmedabad"
+};
+
+const result = Object.assign({}, person, address);
+
+console.log(result);
+Output:
+
+{ name: 'Rahul', city: 'Ahmedabad' }
+
+
+**5. Spread Operator (...)**
+
+A modern alternative to Object.assign().
+
+const person = {
+    name: "Rahul"
+};
+
+const address = {
+    city: "Ahmedabad"
+};
+
+const employee = {
+    ...person,
+    ...address
+};
+
+console.log(employee);
+
+Output:
+{
+  name: "Rahul",
+  city: "Ahmedabad"
+}
+
+**6. Object.freeze()**
+Definition
+
+Makes an object completely immutable.
+
+After freezing:
+
+❌ Cannot add properties
+❌ Cannot update properties
+❌ Cannot delete properties
+
+
+const employee = {
+    name: "Rahul"
+};
+
+Object.freeze(employee);
+
+employee.name = "Amit";
+
+console.log(employee);
+
+Output:
+
+{
+  name: "Rahul"
+}
+
+**7. Object.seal()**
+Definition
+
+Seals an object.
+
+After sealing:
+
+✅ Update existing properties
+❌ Add new properties
+❌ Delete existing properties
+
+const employee = {
+    name: "Rahul"
+};
+
+Object.seal(employee);
+
+employee.name = "Amit";      // Allowed
+employee.city = "Ahmedabad"; // Not allowed
+
+console.log(employee);
+
+Output:
+
+{
+  name: "Amit"
+}
+
+**Difference: freeze() vs seal()**
+| Feature                  | `freeze()` | `seal()` |
+| ------------------------ | ---------- | -------- |
+| Update existing property | ❌ No       | ✅ Yes    |
+| Add new property         | ❌ No       | ❌ No     |
+| Delete property          | ❌ No       | ❌ No     |
+
+**8. hasOwnProperty()**
+Checks whether an object contains a specific property.
+
+const employee = {
+    name: "Rahul",
+    age: 25
+};
+
+console.log(employee.hasOwnProperty("name"));
+console.log(employee.hasOwnProperty("salary"));
+
+Output:
+true
+false
+
+**9. Object.hasOwn()**
+
+A newer alternative to hasOwnProperty().
+
+const employee = {
+    name: "Rahul"
+};
+
+console.log(Object.hasOwn(employee, "name"));
+
+Output:
+true
+
+10. Object.fromEntries()
+
+Converts an array of key-value pairs back into an object.
+
+const data = [
+    ["name", "Rahul"],
+    ["age", 25]
+];
+
+const employee = Object.fromEntries(data);
+
+console.log(employee);
+
+Output:
+{
+  name: "Rahul",
+  age: 25
+}
+
+
+
