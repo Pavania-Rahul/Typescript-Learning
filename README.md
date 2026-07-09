@@ -202,6 +202,7 @@ let price: number = 199.99;
 
 console.log(age);
 console.log(price);
+
 ------------------
 **2. string**
 
@@ -236,6 +237,7 @@ The bigint data type is used to store very large integer values that are beyond 
 
 let population: bigint = 9876543210123456789n;
 console.log(population);
+
 ----------------------------------------------
 **5. void**
 
@@ -267,6 +269,7 @@ console.log(value);
 value = true;
 
 console.log(value);
+
 -------------------------------------------------------------
 **7. undefined**
 
@@ -275,6 +278,7 @@ The undefined data type represents a variable that has been declared but has not
 let value: undefined = undefined;
 
 console.log(value);
+
 --------------------------------------------------------------
 **8. null**
 
