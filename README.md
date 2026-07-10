@@ -734,6 +734,25 @@ console.log(typeof age);
 Output:
 number
 
+-----------------------------------
+
+**8. Nullish Coalescing Operator (??)**
+This is one of the most important modern TypeScript operators.
+
+It returns the right-hand value only if the left-hand value is null or undefined.
+
+let name = null;
+
+console.log(name ?? "Guest");
+
+Output:
+Guest
+
+
+
+
+
+
 **TypeScript Course – Lesson 6 : Functions**
 
 What is a Function?
